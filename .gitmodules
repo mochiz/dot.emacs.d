@@ -4,3 +4,6 @@
 [submodule "vendor/git-status"]
 	path = vendor/git-status
 	url = git://gist.github.com/546654
+[submodule "vendor/js2-mode"]
+	path = vendor/js2-mode
+	url = git://github.com/mooz/js2-mode.git
