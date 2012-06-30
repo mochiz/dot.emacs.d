@@ -1,4 +1,5 @@
 *.elc
 var
 auto-save-list
+archives
 /elpa/Save-visited-files-readme.txt
