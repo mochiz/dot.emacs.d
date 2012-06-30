@@ -21,40 +21,8 @@
 ;; ログを出さない
 ;; (setq message-log-max nil)
 
-;; hide toolbar
-(tool-bar-mode 0)
-
 ;; 警告を視覚的にする
 (setq visible-bell t)
-
-;; ファイルを編集した場合コピーにてバックアップする
-;; inode 番号を変更しない
-(setq backup-by-copying t)
-
-;;; バックアップファイルの保存位置指定[2002/03/02]
-;; !path!to!file-name~ で保存される
-(setq backup-directory-alist
-      '(
-        ("^/etc/" . "~/.emacs.d/var/etc")
-        ("." . "~/.emacs.d/var/emacs")
-        ))
-
-;; emacsclient を利用するためにサーバ起動
-;; サーバが起動していた場合は先に起動していた方を優先
-;; (require 'server)
-;; (unless (server-running-p) (server-start))
-;; (setq server-visit-hook
-;;       '(lambda () 
-;;          ;; Frame を前面にする
-;;          (raise-frame (selected-frame))
-;;          ;; キーボードフォーカスを選択しているFrameにする
-;;          (x-focus-frame (selected-frame))))
-
-;;起動時のmessageを表示しない
-(setq inhibit-startup-message t)
-
-;; scratch のメッセージを空にする
-(setq initial-scratch-message nil)
 
 ; 印刷の設定
 (setq ps-multibyte-buffer 'non-latin-printer)
@@ -63,10 +31,6 @@
 (setq-default auto-fill-mode nil)
 (setq-default fill-column 300)
 (setq text-mode-hook 'turn-off-auto-fill)
-
-; 削除ファイルをOSのごみ箱へ
-;(setq delete-by-moving-to-trash t)
-
 
 ;; 編集関連
 
@@ -101,10 +65,6 @@
 
 ;;動的略語展開で大文字小文字を区別
 (setq dabbrev-case-fold-search nil)
-
-;;新規行を作成しない
-;;emacs21ではデフォルトで設定されています。
-;; (setq next-line-add-newlines nil)
 
 ;; スクロールのマージン
 ;; 一行ずつスクロールする
@@ -160,14 +120,3 @@
           )
         )
 (setq count (1- count)))))
-
-;; textexpander
-(setq ns-alternate-modifier 'alt)
-(define-key global-map [(alt ?v)] 'scroll-down)
-(define-key global-map [(meta ?v)] 'yank)
-
-
-
-
-
-
