@@ -1,3 +1,6 @@
 [submodule "vendor/coffee-mode"]
 	path = vendor/coffee-mode
 	url = git://github.com/defunkt/coffee-mode
+[submodule "vendor/git-status"]
+	path = vendor/git-status
+	url = git://gist.github.com/546654

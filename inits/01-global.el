@@ -1,9 +1,6 @@
 ;;; -*- mode: emacs-lisp; indent-tabs-mode: nil -*-
-
-;;; init_global.el --- global
-
 ;;init.el -- Emacs init setting elisp file
-(setq user-full-name "mochiz")
+(setq user-full-name "Hiroshi Asakura")
 (setq user-mail-address "mochi.hiro43@gmail.com")
 
 ;; 常時デバッグ状態
@@ -15,18 +12,12 @@
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8-unix)
 
-;; ウィンドウの設定
-(if window-system 
-    (progn
-      (setq initial-frame-alist
-            '((width . 80) (height . 50)))
-      (set-background-color "Black")
-      (set-foreground-color "White")
-      (set-cursor-color "Gray")
-      (set-frame-parameter nil 'alpha 85)))
+;; yes/no => y/n
+(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; ログの長さを無限に
 (setq message-log-max 't)
+
 ;; ログを出さない
 ;; (setq message-log-max nil)
 
@@ -95,6 +86,11 @@
 ;; 対応するカッコを色表示する
 ;; 特に色をつけなくてもC-M-p、C-M-n を利用すれば対応するカッコ等に移動できる
 (show-paren-mode t)
+
+;; 現在行を強調
+(global-hl-line-mode 1)
+(set-face-background 'hl-line "dark slate gray")
+
 ;; カッコ対応表示のスタイル
 ;; カッコその物に色が付く(デフォルト)
 ;; (setq show-paren-style 'parenthesis)
@@ -171,11 +167,6 @@
 (define-key global-map [(meta ?v)] 'yank)
 
 
-;; ack
-(defun ack ()
-  (interactive)
-  (let ((grep-find-command "ack --nocolor --nogroup "))
-    (call-interactively 'grep-find)))
 
 
 
