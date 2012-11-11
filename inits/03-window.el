@@ -2,22 +2,20 @@
 (if window-system 
     (progn
       (setq initial-frame-alist
-            '((width . 80) (height . 50)))
+            '((top . 1) (width . 95) (height . 48)))
       (set-background-color "Black")
       (set-foreground-color "White")
       (set-cursor-color "Gray")
+      ;; hide scrollbar
+      (set-scroll-bar-mode nil)
+      ;; hide toolbar
+      (tool-bar-mode 0)
       (set-frame-parameter nil 'alpha 85)))
 
 ;; WindMove
 (when (fboundp 'windmove-default-keybindings)
       (windmove-default-keybindings))
 (setq windmove-wrap-around t)
-
-;; hide scrollbar
-(set-scroll-bar-mode nil)
-
-;; hide toolbar
-(tool-bar-mode 0)
 
 ;; ダイアログは出さない
 (setq use-dialog-box nil)
@@ -52,7 +50,7 @@
 (setq cua-enable-cua-keys nil) ;; 変なキーバインド禁止
 
 ;;; 縦二分割 (IMAKADOスタイル)
-(split-window-horizontally)
+;; (split-window-horizontally)
 
 ;; カーソル移動位置の繰り返しを拡張
 ;; 
