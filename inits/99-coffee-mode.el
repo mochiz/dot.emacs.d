@@ -18,7 +18,7 @@
   ;;                  (shell-command "cake build"))))
 
   ;; aww yeah
-  (define-key coffee-mode-map "\C-L" 'coffee-insert-console)
+  ;; (define-key coffee-mode-map "\C-L" 'coffee-insert-console)
 
   ;; I like debug mode, sometimes.
   (setq coffee-debug-mode nil))
