@@ -6,6 +6,7 @@
 ;; 常時デバッグ状態
 (setq debug-on-error t)
 
+
 ;; 文字コード
 ;;(set-language-environment 'Japanese)
 (set-language-environment  'utf-8)
@@ -76,6 +77,10 @@
 
 ;; 終了時に聞く
 (setq confirm-kill-emacs 'y-or-n-p)
+
+;;行末の空白を強調表示
+(when (boundp 'show-trailing-whitespace)
+  (setq-default show-trailing-whitespace t))
 
 ;; 安全な実行のための共通系関数
 
