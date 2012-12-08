@@ -83,7 +83,7 @@
   (setq-default show-trailing-whitespace t))
 
 ;; 保存時に不要な空白を削除
-(add-hook 'after-save-hook 'delete-trailing-whitespace)
+;; (add-hook 'after-save-hook 'delete-trailing-whitespace)
 
 ;; 安全な実行のための共通系関数
 

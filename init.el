@@ -8,3 +8,4 @@
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")
 
+(put 'dired-find-alternate-file 'disabled nil)
